@@ -16,7 +16,7 @@ function refresh() {
 
             dataToAdd = "";
             i = 1;
-            for (key in data) {
+            for (obj in data) {
                 dataToAdd += "<tr class=\"" + obj.status + "\">\n";
                 dataToAdd += "<td>" + (i) + "</td>\n";
                 dataToAdd += "<td>" + obj.key(i++) + "</td>\n";
