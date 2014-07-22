@@ -10,6 +10,7 @@ function refresh() {
         'monitoring.php',
         {},
         function (data) {
+            //$('#tableBody').html = "";
             console.log(data);
         }
     );
