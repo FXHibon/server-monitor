@@ -46,7 +46,7 @@ function update() {
 	}
 
 	foreach ($imageNames as $key => $value) {
-		if (!in_array($key, $res)) {
+		if (!in_array($value, $res)) {
 			$res[$key] = array("status" => "danger");
 		}
 	}
