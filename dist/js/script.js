@@ -16,11 +16,11 @@ function refresh() {
 
             dataToAdd = "";
             i = 1;
-            for (obj in data) {
-                dataToAdd += "<tr class=\"" + obj.status + "\">\n";
-                dataToAdd += "<td>" + (i) + "</td>\n";
-                dataToAdd += "<td>" + obj.key(i++) + "</td>\n";
-                dataToAdd += "<td>" + (obj.status === "success" ? "Up" : "Down") + "</td>\n";
+            for (var obj in data) {
+                dataToAdd += "<tr class=\"" + data[obj].status + "\">\n";
+                dataToAdd += "<td>" + (i++) + "</td>\n";
+                dataToAdd += "<td>" + obj + "</td>\n";
+                dataToAdd += "<td>" + (data[obj].status === "success" ? "Up" : "Down") + "</td>\n";
                 dataToAdd += "<td>xx</td>\n";
                 dataToAdd += '<td>\n\
                     <button onclick="reboot();" type="button" class="btn btn-default">\n\
