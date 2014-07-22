@@ -16,8 +16,7 @@ function refresh() {
 
             dataToAdd = "";
             i = 1;
-
-            data.forEach(function(obj) {
+            for (key in data) {
                 dataToAdd += "<tr class=\"" + obj.status + "\">\n";
                 dataToAdd += "<td>" + (i) + "</td>\n";
                 dataToAdd += "<td>" + obj.key(i++) + "</td>\n";
@@ -28,7 +27,7 @@ function refresh() {
                         <span class="glyphicon glyphicon-repeat"></span>\n\
                     </button>\n\
                 </td>\n';
-            });
+            }
 
             $('#tableBody').html("");
             $('#tableBody').html(dataToAdd);
