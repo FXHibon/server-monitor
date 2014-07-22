@@ -45,12 +45,13 @@ function update() {
 		$res[$value["Nom de l'image"]]["status"] = "success";
 	}
 
+/*
 	foreach ($imageNames as $key => $value) {
 		if (!in_array($value, $res)) {
 			$res[$key] = array("status" => "danger");
 		}
 	}
-
+*/
 	return $res;
 }
 

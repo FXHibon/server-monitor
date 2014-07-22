@@ -10,8 +10,28 @@ function refresh() {
         'monitoring.php',
         {},
         function (data) {
-            //$('#tableBody').html = "";
-            console.log(data);
+            var i;
+            var dataToAdd;
+
+
+            dataToAdd = "";
+            i = 1;
+
+            data.forEach(function(obj) {
+                dataToAdd += "<tr class=\"" + obj.status + "\">\n";
+                dataToAdd += "<td>" + (i) + "</td>\n";
+                dataToAdd += "<td>" + obj.key(i++) + "</td>\n";
+                dataToAdd += "<td>" + (obj.status === "success" ? "Up" : "Down") + "</td>\n";
+                dataToAdd += "<td>xx</td>\n";
+                dataToAdd += '<td>\n\
+                    <button onclick="reboot();" type="button" class="btn btn-default">\n\
+                        <span class="glyphicon glyphicon-repeat"></span>\n\
+                    </button>\n\
+                </td>\n';
+            });
+
+            $('#tableBody').html("");
+            $('#tableBody').html(dataToAdd);
         }
     );
 }
