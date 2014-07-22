@@ -29,9 +29,10 @@ function csv_to_array($filename='', $delimiter=',')
     return $data;
 }
 
-$imageNames = array("node.exe", "mongod.exe", "httpd.exe");
+
 
 function update() {
+	$imageNames = array("node.exe", "mongod.exe", "httpd.exe");
 	exec('tasklist /FI "imagename eq node.exe" /fo csv > results.txt');
 	exec('tasklist /FI "imagename eq mongod.exe" /fo csv /nh >> results.txt');
 	exec('tasklist /FI "imagename eq httpd.exe" /fo csv /nh >> results.txt');
