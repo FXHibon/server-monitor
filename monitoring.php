@@ -50,8 +50,8 @@ function update() {
 		if (!in_array($value, $res)) {
 			$res[$key] = array("status" => "danger");
 		}
-	}
-*/
+	}*/
+
 	return $res;
 }
 
