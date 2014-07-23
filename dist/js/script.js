@@ -59,3 +59,5 @@ function reboot(component) {
         }
     );
 }
+
+refresh();

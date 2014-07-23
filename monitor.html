@@ -34,6 +34,8 @@
     <div class="starter-template">
         <h1>Components monitoring:</h1>
 
+        <p><button onclick="refresh()" type="button" class="btn btn-primary">Refresh status</button></p>
+
         <div class="bs-example">
             <table class="table table-hover">
                 <thead>
@@ -46,39 +48,6 @@
                 </tr>
                 </thead>
                 <tbody id="tableBody">
-                <tr class="success">
-                    <td>1</td>
-                    <td>NodeJs Server</td>
-                    <td>Up</td>
-                    <td>xx</td>
-                    <td>
-                        <button onclick="reboot();" type="button" class="btn btn-default">
-                            <span class="glyphicon glyphicon-repeat"></span>
-                        </button>
-                    </td>
-                </tr>
-                <tr class="danger">
-                    <td>2</td>
-                    <td>MongoDB Server</td>
-                    <td>Up</td>
-                    <td>xx</td>
-                    <td>
-                        <button onclick="reboot();" type="button" class="btn btn-default">
-                            <span class="glyphicon glyphicon-repeat"></span>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Apache Server</td>
-                    <td>Up</td>
-                    <td>xx</td>
-                    <td>
-                        <button onclick="reboot();" type="button" class="btn btn-default">
-                            <span class="glyphicon glyphicon-repeat"></span>
-                        </button>
-                    </td>
-                </tr>
                 </tbody>
             </table>
         </div>
