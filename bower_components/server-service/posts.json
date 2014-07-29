@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "/dist/images/node-icon.png",
+        "name": "node.exe",
+        "state": "Up"
+    },
+    {
+        "icon": "/dist/images/mongod-icon.png",
+        "name": "mongod.exe",
+        "state": "Up"
+    },
+    {
+        "icon": "/dist/images/httpd-icon.png",
+        "name": "httpd.exe",
+        "state": "Up"
+    }
+]

@@ -1,22 +1,35 @@
-body {
-    padding-top: 50px;
+html,body {
+    height: 100%;
+    margin: 0;
+    background-color: #E5E5E5;
+    font-family: 'RobotoDraft', sans-serif;
 }
-.starter-template {
-    padding: 40px 15px;
-    text-align: center;
+core-header-panel {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
-
-.bs-example {
-    margin-right: 0;
-    margin-left: 0;
-    background-color: #fff;
-    border-color: #ddd;
-    border-width: 1px;
-    border-radius: 4px 4px 0 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+core-toolbar {
+    background: #03a9f4;
+    color: white;
 }
-
-th {
-    text-align: center;
+#tabs {
+    width: 100%;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.container {
+    width: 80%;
+    margin: 50px auto;
+}
+@media (min-width: 481px) {
+    #tabs {
+        width: 200px;
+    }
+    .container {
+        width: 400px;
+    }
 }

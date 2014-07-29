@@ -1,0 +1,25 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-ajax/core-ajax.html">
+
+<polymer-element name="server-service" attributes="servers">
+    <template>
+        <link rel="stylesheet" href="server-service.html">
+        <core-ajax id="ajax"
+                   auto
+                   url="./posts.json"
+                   on-core-response="{{serversLoaded}}"
+                   handleAs="json">
+        </core-ajax>
+    </template>
+    <script>
+        Polymer('server-service', {
+            created: function() {
+                this.servers = [];
+            },
+            serversLoaded: function() {
+                // Make a copy of the loaded data
+                this.servers = this.$.ajax.response.slice(0);
+            }
+        });
+    </script>
+</polymer-element>

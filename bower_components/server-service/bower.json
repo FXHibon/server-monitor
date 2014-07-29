@@ -1,9 +1,9 @@
 {
-  "name": "server-monitor",
+  "name": "server-service",
   "version": "0.0.0",
   "homepage": "https://github.com/FXHibon/server-monitor",
   "authors": [
-    "FXHibon <hibonfx@gmail.com>"
+    "FXHibon <djxf44@gmail.com>"
   ],
   "license": "MIT",
   "ignore": [
@@ -12,9 +12,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "paper-elements": "Polymer/paper-elements#~0.3.4",
-    "core-ajax": "Polymer/core-ajax#~0.3.4"
-  }
+  ]
 }
