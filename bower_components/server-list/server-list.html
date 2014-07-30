@@ -2,14 +2,14 @@
 <link rel="import" href="../server-service/server-service.html">
 <link rel="import" href="../server-card/server-card.html">
 
-<polymer-element name="server-list">
+<polymer-element name="server-list" attributes="show">
     <template>
         <link rel="stylesheet" href="server-list.css">
         <server-service id="service" servers="{{servers}}"></server-service>
 
         <div layout vertical center>
             <template repeat="{{server in servers}}">
-                <server-card>
+                <server-card hidden?="{{show != 'all' && show != server.state}}">
                     <img src="{{server.icon}}" width="70" height="70">
                     <h2>{{server.name}}</h2>
                     <p>{{server.state}}</p>

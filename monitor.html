@@ -19,16 +19,28 @@
 
 <core-header-panel>
     <core-toolbar>
-        <paper-tabs id="tabs" selected="home" self-end>
-            <paper-tab name="home">Home</paper-tab>
+        <paper-tabs id="tabs" selected="all" self-end>
+            <paper-tab name="all">All</paper-tab>
+            <paper-tab name="running">Running</paper-tab>
+            <paper-tab name="down">Down</paper-tab>
         </paper-tabs>
     </core-toolbar>
 
     <div class="container" layout vertical center>
-        <server-list></server-list>
+        <server-list show="all"></server-list>
     </div>
 
 </core-header-panel>
+
+
+<script>
+    var list = document.querySelector('server-list');
+    var tabs = document.querySelector('paper-tabs');
+
+    tabs.addEventListener('core-select', function() {
+        list.show = tabs.selected;
+    });
+</script>
 
 </body>
 </html>
