@@ -41,7 +41,7 @@ function update() {
 
 	// traitements des processus actifs
 	foreach ($csv as $value) {
-		if (in_array($value[0], $imageNames) ) {
+		if (in_array($value[0], $imageNames) && !in_array($value[0], $processedProcess) ) {
 			$processedProcess[] = $value[0];
 			$tmp = '{"name": "' . $value[0] . '", "state": "running", "icon": "/dist/images/' . $value[0] . '-icon.png"}';
 			$res .= $tmp . ", ";
